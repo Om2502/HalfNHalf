@@ -6,15 +6,12 @@ function InfoBlob() {
             <div>
                 <Typography
                     variant="h5"
-                    noWrap
                     component="a"
-                    href=""
                     sx={{
                         mr: 1,
                         display: { xs: "flex", md: "flex" },
                         flexGrow: 1,
-                        fontFamily: "monospace",
-                        fontWeight: 600,
+                        fontWeight: 200,
                         letterSpacing: ".1rem",
                         color: "inherit",
                         textDecoration: "none",
