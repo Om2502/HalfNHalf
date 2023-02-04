@@ -1,0 +1,42 @@
+
+
+Code smart travel
+User info
+# Get destination information
+destination = input("Enter your destination: ")
+
+# Get mode of transportation
+transportation = input("Enter your mode of transportation (train, car, plane): ")
+
+# Get travel dates
+start_date = input("Enter your start date (dd/mm/yyyy): ")
+end_date = input("Enter your end date (dd/mm/yyyy): ")
+
+Api info
+import requests
+
+# Get weather information
+weather_api_key = "your_api_key"
+weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={destination}&appid={weather_api_key}"
+weather_response = requests.get(weather_url)
+weather_data = weather_response.json()
+
+# Get local attraction information
+attractions_api_key = "your_api_key"
+attractions_url = f"https://maps.googleapis.com/maps/api/place/textsearch/json?query={destination}+tourist+attractions&key={attractions_api_key}"
+attractions_response = requests.get(attractions_url)
+attractions_data = attractions_response.json()
+
+Use machine learning algorithms to suggest itineraries:
+# Example using k-means clustering to group attractions based on user preferences
+from sklearn.cluster import KMeans
+
+# Assume user preferences are stored in a list
+user_preferences = [1, 2, 3, 4, 5] e
+
+# Use k-means to group attractions based on user preferences
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(attractions_data)
+
+# Get suggested itinerary based on k-means results
+suggested_itinerary = kmeans.predict(user_preferences)
