@@ -6,7 +6,9 @@ interface TravelPrefType {
     inputValue?: string;
     name: string;
 }
+// here's where our tags are
 const travelPreferences: readonly TravelPrefType[] = [{ name: "beaches" }];
+// this is where we loop over each tag and do something with it
 function handleInputs(input: TravelPrefType[]) {
     for (let i of input) {
         console.log(i);
